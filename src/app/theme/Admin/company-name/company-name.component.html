@@ -1,0 +1,181 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Company Master</h5>
+        <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span> #f="ngForm" (ngSubmit)="onFormSubmit(f)" --> 
+      </div>
+      <div class="card-block">
+        <form class="form-material" action="javascript:" (ngSubmit)="onFormSubmit(f)">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Comp_Code" [(ngModel)]="companymaster.Comp_Code" required #Comp_Code="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Company Initial (For EG :- UOB)</label>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Comp_Name" [(ngModel)]="companymaster.Comp_Name" required #Comp_Name="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Company Name</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Owner_Name" [(ngModel)]="companymaster.Owner_Name" required #Owner_Name="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Owner Name</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Address" [(ngModel)]="companymaster.Address" required #Address="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Address</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-default">
+                <select class="form-control form-control-default" name="City" [(ngModel)]="companymaster.City" required #City="ngModel">
+                  <option value="">Select City</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Kota">Kota</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <select class="form-control form-control-default" name="State" [(ngModel)]="companymaster.State" required #State="ngModel">
+                  <option value="">Select State</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Maharatra">Maharatra</option>
+                  <option value="Union Territories">Union Territories</option>
+                  <option value="Rajesthan">Rajesthan</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Comp_Email" [(ngModel)]="companymaster.Comp_Email" required #Comp_Email="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Email (exa@gmail.com)</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Comp_Mobile_No" [(ngModel)]="companymaster.Comp_Mobile_No" required #Comp_Mobile_No="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Mobile Number (00) 00000-0000</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Landline_No" [(ngModel)]="companymaster.Landline_No" required #Landline_No="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Landline Number (0000) 000-0000</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Web_Url" [(ngModel)]="companymaster.Web_Url" required #Web_Url="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Web Registration (For eg :- www.google.com)</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <input class="form-control" type="date" name="Date_Of_Reg" [(ngModel)]="companymaster.Date_Of_Reg" required #Date_Of_Reg="ngModel" />
+                <span class="form-bar"></span>
+                <label class="float-label">Date Of Registration</label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="License_No" [(ngModel)]="companymaster.License_No" required #License_No="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">License No </label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group form-default">
+                <select name="select" class="form-control form-control-default" name="Buss_Type" [(ngModel)]="companymaster.Buss_Type" required #Buss_Type="ngModel">
+                  <option value="">Select Business Type</option>
+                  <option value="Private">Private</option>
+                  <option value="LLP">LLP</option>
+                  <option value="Co-Orgination">Co-Orgination</option>
+                  <option value="Partnership">Partnership</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <select class="form-control form-control-default" name="Buss_Nature" [(ngModel)]="companymaster.Buss_Nature" required #Buss_Nature="ngModel">
+                  <option value="">Select Nature Of Business</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Consultant">Consultant</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group form-primary">
+                <input type="text" class="form-control" name="Remark" [(ngModel)]="companymaster.Remark" required #Remark="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Remarks</label>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="form-group row">
+            <label class="col-sm-1">Active</label>
+            <div class="col-sm-11">
+              <div class="form-radio">
+                <div class="radio radiofill radio-primary radio-inline">
+                  <label>
+                    <input type="radio" value="free" formControlName="area">
+                    <i class="helper"></i>Yes
+                  </label>
+                </div>
+                <div class="radio radiofill radio-primary radio-inline">
+                  <label>
+                    <input type="radio" value="personal" formControlName="area">
+                    <i class="helper"></i>No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group form-primary">
+                <div class="checkbox-fade fade-in-primary">
+                  <label>
+                    <input type="checkbox" value="">
+                    <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                    <span>Liscense & Policy Doc.</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- <ui-switch class="js-single" color="#4680ff" switchColor="#fff" size="medium" checked></ui-switch> id="CompSubmit" [disabled]="angForm.invalid" type="submit"  -->
+            <div class="col-md-12" style="text-align:right" >
+              <button type="submit" class="btn hor-grd btn-grd-primary ripple light">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <form class="form-material" action="javascript:" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>User Master</h5>
+            </div>
+            <div class="col-md-8 text-align-right">
+              <button type="submit" class="btn hor-grd btn-grd-primary ripple light">Save</button>
+            </div>
+          </div>
+          <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+        </div>
+        <div class="card-block">
+          <!-- <form class="form-material" action="javascript:" #f="ngForm" (ngSubmit)="onFormSubmit(f)"> -->
+            <div class="row">
+              <div class="col-md-2">
+                <div class="form-group form-default">
+                  <select name="select" class="form-control form-control-default" name="User_Type"
+                    [(ngModel)]="usermaster.User_Type" required #User_Type="ngModel">
+                    <option value="">Select Type</option>
+                    <option value="Employee">Employee</option>
+                    <option value="Contractural">Contractural</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group form-primary">
+                  <input type="text" name="UserCode" class="form-control" name="User_EP_No"
+                    [(ngModel)]="usermaster.User_EP_No" required #User_EP_No="ngModel">
+                  <span class="form-bar"></span>
+                  <label class="float-label">User Enrollment No (Eg:- A10000XXXX)</label>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group form-primary">
+                  <input type="text" name="UserName" class="form-control" name="User_Name"
+                    [(ngModel)]="usermaster.User_Name" required #User_Name="ngModel">
+                  <span class="form-bar"></span>
+                  <label class="float-label">Enroll User Name</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group form-primary">
+                  <input type="text" class="form-control" name="User_Email"
+                    [(ngModel)]="usermaster.User_Email" required #User_Email="ngModel">
+                  <span class="form-bar"></span>
+                  <label class="float-label">Email (exa@gmail.com)</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group form-primary">
+                  <input class="form-control" type="date" name="User_DOB" [(ngModel)]="usermaster.User_DOB" required #User_DOB="ngModel" />
+                  <!-- name="User_DOB" [(ngModel)]="usermaster.User_DOB" required #User_DOB="ngModel"  -->
+                  <span class="form-bar"></span>
+                  <label class="float-label">Date Of Birth</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group form-primary">
+                  <input type="text" name="footer-email" class="form-control" name="User_Mobile_No"
+                    [(ngModel)]="usermaster.User_Mobile_No" required #User_Mobile_No="ngModel">
+                  <span class="form-bar"></span>
+                  <label class="float-label">Mobile Number (00) 00000-0000</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group form-primary">
+                  <input type="password" name="footer-email" class="form-control" name="User_Password"
+                    [(ngModel)]="usermaster.User_Password" required #User_Password="ngModel">
+                  <span class="form-bar"></span>
+                  <label class="float-label">Password</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group form-primary">
+                  <input type="password" name="footer-email" class="form-control" required="">
+                  <span class="form-bar"></span>
+                  <label class="float-label">Confirm Password</label>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+            <div class="col-md-12" style="text-align:right">
+              <button class="btn hor-grd btn-grd-primary ripple light">Save</button>
+            </div>
+          </div> -->
+          <!-- </form> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

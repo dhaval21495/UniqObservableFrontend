@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <form class="form-material" action="javascript:" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Menu Master</h5>
+            </div>
+            <div class="col-md-8 text-align-right">
+              <button type="submit" class="btn hor-grd btn-grd-primary ripple light">Save</button>
+            </div>
+          </div>
+          <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group form-default">
+                <select name="select" class="form-control form-control-default" name="Menu_Type"
+                  [(ngModel)]="menumaster.Menu_Type" required #Menu_Type="ngModel">
+                  <option value="">Select Menu Type</option>
+                  <option value="Item">Item</option>
+                  <option value="Main Menu">Main Menu</option>
+                  <option value="SubMenu">SubMenu</option>
+                </select>
+              </div>
+            </div>
+            <!-- <div class="col-md-5">
+            </div>
+            <div class="col-md-5">
+            </div> -->
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group form-primary">
+                <input type="text" name="manu-name" class="form-control" name="Menu_Name"
+                  [(ngModel)]="menumaster.Menu_Name" required #Menu_Name="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Menu Name</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group form-primary">
+                <input type="text" name="manu-desc" class="form-control" name="Menu_Desc"
+                  [(ngModel)]="menumaster.Menu_Desc" required #Menu_Desc="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Menu Description</label>
+              </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group form-primary">
+                <input type="text" name="menu-group" class="form-control" name="Menu_Group"
+                  [(ngModel)]="menumaster.Menu_Group" required #Menu_Group="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Menu Group</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group form-primary">
+                <input type="text" name="submenu-group" class="form-control" name="Menu_Sub_Group"
+                  [(ngModel)]="menumaster.Menu_Sub_Group" required #Menu_Sub_Group="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">SubMenu Group</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group form-primary">
+                <input type="text" name="menu-url" class="form-control" name="Menu_Url"
+                  [(ngModel)]="menumaster.Menu_Url" required #Menu_Url="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Menu Url</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

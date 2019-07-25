@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <form class="form-material" action="javascript:" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Code Type Master</h5>
+            </div>
+            <div class="col-md-8 text-align-right">
+              <button type="submit" class="btn hor-grd btn-grd-primary ripple light">Save</button>
+            </div>
+          </div>
+          <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+        </div>
+        <div class="card-block">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group form-primary">
+                <input type="text" name="Code_Type" class="form-control" 
+                [(ngModel)]="codetypemaster.Code_Type" required #Code_Type="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Code Type</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group form-primary">
+                <input type="text" name="Code_Desc" class="form-control" 
+                [(ngModel)]="codetypemaster.Code_Desc" required #Code_Desc="ngModel">
+                <span class="form-bar"></span>
+                <label class="float-label">Code Description</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-1">Active</label>
+            <div class="col-sm-11">
+              <div class="form-radio">
+                <div class="radio radiofill radio-primary radio-inline">
+                  <label>
+                    <input name="Code_Active" type="radio" value="YES" #name="ngModel" [(ngModel)]="codetypemaster.Active_YN" >
+                    <i class="helper"></i>Yes   
+                  </label>
+                </div>
+                <div class="radio radiofill radio-primary radio-inline">
+                  <label>
+                    <input name="Code_Active" type="radio" value="NO" #name="ngModel" [(ngModel)]="codetypemaster.Active_YN" >
+                    <i class="helper"></i>No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

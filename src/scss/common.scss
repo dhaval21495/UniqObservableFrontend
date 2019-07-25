@@ -1,0 +1,20 @@
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 7px);
+}
+
+.form-control-default {
+    /* border-color: #d6d6d6; */
+    color: #373a3c;
+}
+
+.form-material .form-control:focus {
+    border-color: #cccccc;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.card .card-header h5 {
+    padding-top: 20px;
+}

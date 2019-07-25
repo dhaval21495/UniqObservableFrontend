@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Code Master</h5>
+        <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+      </div>
+      <div class="card-block">
+        <form class="form-material" action="javascript:">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group form-default">
+                <select name="select" class="form-control form-control-default">
+                  <option value="opt1">Select Code Type</option>
+                  <option value="opt2">Side</option>
+                  <option value="opt3">Other Type</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group form-primary">
+                <input type="text" name="Code" class="form-control" required="">
+                <span class="form-bar"></span>
+                <label class="float-label">code</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group form-primary">
+                <input type="text" name="codeDesc" class="form-control" required="">
+                <span class="form-bar"></span>
+                <label class="float-label">Code Description</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group form-primary">
+                <input type="text" name="remark" class="form-control" required="">
+                <span class="form-bar"></span>
+                <label class="float-label">Remark</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-1">Active</label>
+            <div class="col-sm-11">
+              <div class="form-radio">
+                <div class="radio radiofill radio-primary radio-inline">
+                  <label>
+                    <input type="radio" value="free" formControlName="area">
+                    <i class="helper"></i>Yes
+                  </label>
+                </div>
+                <div class="radio radiofill radio-primary radio-inline">
+                  <label>
+                    <input type="radio" value="personal" formControlName="area">
+                    <i class="helper"></i>No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" style="text-align:right">
+              <button class="btn hor-grd btn-grd-primary ripple light">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Company Reports</h5>
+        <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+      </div>
+      <table id="mytable" class="table table-list">
+        <tbody>
+          <tr id="1" data-status="allopp">
+            <br>
+            <div class="table-responsive">
+              <table class="table table-sm">
+                <thead>
+                  <tr data-status="allopp">
+                    <th>Opportunities</th>
+                    <th class="center">DPL</th>
+                    <th class="center">ERO</th>
+                    <th class="center">CSEG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-status="allopp" >
+                    <td class="center">
+                      <span class="label">
+                        POPO
+                      </span>
+                    </td>
+                    <td class="center">
+                      <span class="label">
+                        WERT
+                      </span>
+                    </td>
+                    <td class="center">
+                      <span class="label">
+                        ASDF
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pagination-controls id="tab1" (pageChange)=""></pagination-controls>
+            </div>
+          </tr>
+
+          <tr id="2" class="displaynone" data-status="pending">
+            <br>
+            <div class="table-responsive">
+              <table class="table table-sm">
+                <thead>
+                  <tr data-status="pending">
+                    <th>Opportunities</th>
+                    <th class="center">DPL</th>
+                    <th class="center">ERO</th>
+                    <th class="center">CSEG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-status="pending">
+                    <td>
+                      ABCD
+                    </td>
+                    <td class="center">
+                      <span class="label">
+                        CDEF
+                      </span>
+                    </td>
+                    <td class="center">
+                      <span class="label">
+                        ZYEX
+                      </span>
+                    </td>
+                    <td class="center">
+                      <span class="label">
+                        VKPL
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pagination-controls id="tab2" (pageChange)=""></pagination-controls>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
