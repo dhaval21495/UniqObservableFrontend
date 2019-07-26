@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
 /*import {NotificationsService} from 'angular2-notifications';*/
+import { ToastrService } from 'ngx-toastr';
 
 declare const AmCharts: any;
 declare var $: any;
@@ -66,7 +67,7 @@ export class DefaultComponent implements OnInit, AfterViewInit {
     }
   };
 
-  constructor() { // private servicePNotify: NotificationsService
+  constructor(private toastr: ToastrService) { // private servicePNotify: NotificationsService
   }
 
   ngOnInit() {
@@ -444,6 +445,10 @@ export class DefaultComponent implements OnInit, AfterViewInit {
     }, 75);
   }
 
+  toster(){
+    console.log('comming');
+    this.toastr.success('successfully Working');
+  }
   ngAfterViewInit() {
     /*setTimeout(() => {
       const windowWidth = window.innerWidth;
