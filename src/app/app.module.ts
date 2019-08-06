@@ -18,6 +18,7 @@ import { CodeTypeMasterService } from '../app/shared/services/CodeTypeMaster.ser
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ColorPickerService, Rgba} from 'ngx-color-picker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     // NgModule,
     FormsModule,
     BrowserModule,
+    // ColorPickerService,
     ToastrModule.forRoot(
       {
         timeOut: 10000,

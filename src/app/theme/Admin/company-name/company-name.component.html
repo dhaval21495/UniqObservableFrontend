@@ -94,9 +94,16 @@
             </div>
             <div class="col-md-3">
               <div class="form-group form-primary">
-                <input class="form-control" type="date" name="Date_Of_Reg" [(ngModel)]="companymaster.Date_Of_Reg" required #Date_Of_Reg="ngModel" />
-                <span class="form-bar"></span>
-                <label class="float-label">Date Of Registration</label>
+                  <div class="input-group">
+                <input class="form-control" type="text" placeholder="Date Of Registration " ngbDatepicker name="Date_Of_Reg" [(ngModel)]="companymaster.Date_Of_Reg" required #Date_Of_Reg="ngbDatepicker" />
+                  <div class="input-group-append">
+                    <span class="input-group-text" (click)="Date_Of_Reg.toggle()">
+                      <i class="icofont icofont-ui-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+                <!-- <label class="float-label">Date Of Registration </label> -->
+
               </div>
             </div>
             <div class="col-md-3">

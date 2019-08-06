@@ -6,7 +6,7 @@ import {SharedModule} from '../../../shared/shared.module';
 import {UiSwitchModule} from 'ng2-ui-switch';
 import {TagInputModule} from 'ngx-chips';
 import {FormsModule} from '@angular/forms';
-
+import {ColorPickerModule} from 'ngx-color-picker';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,7 +14,8 @@ import {FormsModule} from '@angular/forms';
     SharedModule,
     UiSwitchModule,
     TagInputModule,
-    FormsModule
+    FormsModule,
+    ColorPickerModule
   ],
   declarations: [
     CompanyNameComponent,
