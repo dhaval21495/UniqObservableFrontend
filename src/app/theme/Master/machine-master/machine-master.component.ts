@@ -1,4 +1,11 @@
 import {Component, Directive, ElementRef, HostListener, OnInit} from '@angular/core';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import * as $ from 'jquery';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MachineMasterService } from '../../../shared/services/MachineMaster.service';
+import { MachineMaster } from '../../../shared/models';
 
 @Component({
   selector: 'app-machineMaster',
@@ -11,9 +18,38 @@ import {Component, Directive, ElementRef, HostListener, OnInit} from '@angular/c
 })
 export class MachineMasterComponent implements OnInit {
 
-  constructor() { }
+  machinemaster = new MachineMaster;
+  angForm: FormGroup;
+
+  constructor(
+    private MachineMasterService: MachineMasterService,
+    private appRouter: Router,
+    private toastr: ToastrService,
+    private route: ActivatedRoute,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
+  }
+
+  onFormSubmit(form: NgForm) {
+    this.MachineMasterService.create(this.machinemaster)
+      .then(result => {
+        if (result) {
+          this.toastr.success('Machine added successfully');
+          //this.loading = false;
+          console.log('Machine added successfull');
+        }
+      })
+      .catch(statusData => {
+        $('#oppsend').prop('disabled', false);
+        if (statusData === '409') {
+
+        }
+        if (statusData === '500') {
+          this.toastr.error('Internal server error!');
+        }
+      });
   }
 
 }

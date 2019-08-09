@@ -15,6 +15,7 @@ import { CompanyMasterService } from '../app/shared/services/CompanyMaster.servi
 import { UserMasterService } from '../app/shared/services/UserMaster.service';
 import { MenuMasterService } from '../app/shared/services/MenuMaster.service';
 import { CodeTypeMasterService } from '../app/shared/services/CodeTypeMaster.service';
+import { MachineMasterService } from '../app/shared/services/MachineMaster.service';
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -44,7 +45,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   schemas: [NO_ERRORS_SCHEMA],
   providers: [
     {provide:LocationStrategy, useClass: HashLocationStrategy},
-    MenuItems, CompanyMasterService, UserMasterService, MenuMasterService,CodeTypeMasterService],
+    MenuItems, CompanyMasterService, UserMasterService, MenuMasterService,CodeTypeMasterService,MachineMasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { Headers, Http, Response, RequestOptions, ResponseContentType } from '@angular/http';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
+import { MachineMaster } from '../models';
 // import { AuthenticationService } from './authentication.service';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -11,12 +12,10 @@ import { Pipe } from '@angular/core';
 import { promise } from 'protractor';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { CodeTypeMaster } from '../models';
-import { CodeType } from '../models';
 
 @Injectable()
 
-export class CodeTypeMasterService {
+export class MachineMasterService {
 
     constructor(
         private http: Http,
@@ -25,24 +24,20 @@ export class CodeTypeMasterService {
     ) { }
 
 
-    create(CodeTypeMaster: CodeTypeMaster) {
-        //console.log(CodeTypeMaster);
+    create(MachineMaster: MachineMaster) {
+        console.log(MachineMaster);
         return this.http
-            .post('http://localhost:3001/codetypemaster/addCodeTypeMaster', CodeTypeMaster)
-            // .post('/codetypemaster/addCodeTypeMaster', CodeTypeMaster)
+            //.post('http://localhost:3001/codetypemaster/addCodeTypeMaster', CodeTypeMaster)
+            .post('/machineMaster/addMachine', MachineMaster)
             .toPromise()
             .catch(this.handleError);
     }
 
-    update(id: number, CodeTypeMaster: CodeTypeMaster): Promise<CodeTypeMaster> {
+    update(id: number, MachineMaster: MachineMaster): Promise<MachineMaster> {
         // CompanyMaster['id'] = id;
-        return this.http.put('CodeTypeMaster/' + id, CodeTypeMaster)
+        return this.http.put('MachineMaster/' + id, MachineMaster)
             .toPromise()
             .catch(this.handleError);
-    }
-
-    getAllCodeType(): Promise<CodeType> {
-
     }
 
     private handleError(error: any): Promise<any> {
