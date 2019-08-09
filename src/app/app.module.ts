@@ -19,6 +19,7 @@ import { MachineMasterService } from '../app/shared/services/MachineMaster.servi
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ColorPickerService, Rgba} from 'ngx-color-picker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     // NgModule,
     FormsModule,
     BrowserModule,
+    // ColorPickerService,
     ToastrModule.forRoot(
       {
         timeOut: 10000,
