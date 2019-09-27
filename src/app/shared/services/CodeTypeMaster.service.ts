@@ -11,8 +11,8 @@ import { Pipe } from '@angular/core';
 import { promise } from 'protractor';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { CodeTypeMaster } from '../models';
-import { CodeType } from '../models';
+import { CodeTypeMaster, CodeType } from '../models';
+//import { CodeType } from '../models';
 
 @Injectable()
 
@@ -41,8 +41,10 @@ export class CodeTypeMasterService {
             .catch(this.handleError);
     }
 
-    getAllCodeType(): Promise<CodeType> {
-
+    getAllCodeType(): Promise<CodeType[]> {
+        return this.httpClient.get('/allCodeTypeMaster')
+            .toPromise()
+            .catch(this.handleError);
     }
 
     private handleError(error: any): Promise<any> {

@@ -12,8 +12,9 @@
               <div class="form-group form-default">
                 <select name="select" class="form-control form-control-default">
                   <option value="opt1">Select Code Type</option>
-                  <option value="opt2">Side</option>
-                  <option value="opt3">Other Type</option>
+                  <option *ngFor="let CodeType of CodeType" [value]="CodeType.id">{{CodeType.Code_Type}}</option>
+                  <!-- <option value="opt2">Side</option>
+                  <option value="opt3">Other Type</option> -->
                 </select>
               </div>
             </div>
@@ -21,7 +22,7 @@
               <div class="form-group form-primary">
                 <input type="text" name="Code" class="form-control" required="">
                 <span class="form-bar"></span>
-                <label class="float-label">code</label>
+                <label class="float-label">Code</label>
               </div>
             </div>
           </div>

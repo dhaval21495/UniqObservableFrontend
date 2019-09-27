@@ -1,4 +1,12 @@
 import {Component, Directive, ElementRef, HostListener, OnInit} from '@angular/core';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import * as $ from 'jquery';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {CodeType} from '../../../shared/models';
+import {CodeTypeMasterService} from '../../../shared/services/CodeTypeMaster.service';
+//import { MenuMasterService } from '../../../shared/services/MenuMaster.service';
 
 @Component({
   selector: 'app-codeMaster',
@@ -11,11 +19,30 @@ import {Component, Directive, ElementRef, HostListener, OnInit} from '@angular/c
 })
 export class CodeMasterComponent implements OnInit {
 
-  constructor() { }
+  CodeType: CodeType[];
+  constructor(
+    private CodeTypeMasterService: CodeTypeMasterService,
+    // private appRouter: Router,
+     private toastr: ToastrService
+    // private route: ActivatedRoute,
+    // private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.getAllCodeType();
   }
 
+  getAllCodeType() {
+    this.CodeTypeMasterService.getAllCodeType().then(CodeType => this.CodeType = CodeType)
+    .catch(statusData => {
+      if (statusData === '500') {
+        this.toastr.error('Internal server error!');
+      }
+      if (statusData === '403') {
+        this.toastr.error('Access denied for this page.');
+      }
+    });
+  }
 }
 
 @Directive({
